@@ -10,7 +10,7 @@ RUN npm run build
 #FROM nginx:1.17.1-alpine
 FROM nginxinc/nginx-unprivileged 
 
-COPY nginx.conf /etc/nginx/nginx.conf
+#COPY nginx.conf /etc/nginx/nginx.conf
 
 COPY --from=build /usr/src/app/dist/aston-villa-app /usr/share/nginx/html
 
